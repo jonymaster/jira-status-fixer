@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jira Status Field Fixer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h1 {
+      font-size: 18px;
+      margin: 0 0 5px 0;
+      color: #333;
+    }
+    
+    .header p {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+    }
+    
+    .status {
+      background: #f0f8ff;
+      border: 1px solid #b3d9ff;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .status h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #0052cc;
+    }
+    
+    .status p {
+      margin: 0;
+      font-size: 12px;
+      color: #666;
+      line-height: 1.4;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .btn-primary {
+      background: #0052cc;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #0041a3;
+    }
+    
+    .btn-secondary {
+      background: #f4f5f7;
+      color: #42526e;
+      border: 1px solid #dfe1e6;
+    }
+    
+    .btn-secondary:hover {
+      background: #ebecf0;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    
+    .footer a {
+      color: #0052cc;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔧 Jira Status Fixer</h1>
+    <p>Moves the Status field to a better position</p>
+  </div>
+  
+  <div class="status">
+    <h3>✅ Active</h3>
+    <p>The extension is working on this Jira page. The Status field should now be positioned in the top-right corner of the ticket view.</p>
+  </div>
+  
+  <div class="actions">
+    <button class="btn btn-primary" id="refresh">Refresh Page</button>
+    <button class="btn btn-secondary" id="settings">Settings</button>
+  </div>
+  
+  <div class="footer">
+    <a href="#" id="feedback">Send Feedback</a> • 
+    <a href="#" id="help">Help</a>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

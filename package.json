@@ -1,0 +1,25 @@
+{
+  "name": "jira-status-fixer",
+  "version": "1.0.0",
+  "description": "Chrome extension to fix Jira Status field positioning and Resolution label display",
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "cp -r src/styles dist/ && cp -r src/icons dist/ && cp src/popup.html dist/ && cp manifest.json dist/",
+    "watch": "tsc --watch",
+    "dev": "npm run build && npm run watch",
+    "clean": "rm -rf dist",
+    "package": "npm run build && cd dist && zip -r ../jira-status-fixer.zip ."
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "jira",
+    "atlassian",
+    "productivity"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

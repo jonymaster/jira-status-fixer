@@ -1,0 +1,66 @@
+/* Jira Status Field Fixer - Styles */
+#jira-status-fixer-extension {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: nowrap !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+#jira-status-fixer-extension [data-testid*="status"] {
+  display: block !important;
+}
+
+#jira-status-fixer-extension [data-testid*="status-button"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+}
+
+#jira-status-fixer-extension [data-testid*="status-button"] > span {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+#jira-status-fixer-resolution {
+  display: inline-flex !important;
+  align-items: center !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  position: relative !important;
+  max-width: 200px !important;
+}
+
+.jira-resolution-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--ds-text, #42526e);
+  border: 1px solid var(--ds-border, #dfe1e6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.jira-resolution-badge svg {
+  color: var(--ds-icon-success, #22A06B);
+}
+
+#jira-status-fixer-extension [data-testid*="status-button"] > span:first-child {
+  text-align: inherit !important;
+  flex: initial !important;
+}
+
+@media (max-width: 768px) {
+  #jira-status-fixer-extension {
+    padding: 4px !important;
+  }
+}
